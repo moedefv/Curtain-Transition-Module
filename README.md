@@ -62,8 +62,9 @@ Swipe = {
 ```
 
 ## Download
-Creator Store Link: https://create.roblox.com/store/asset/104953184936909/Curtain
+[Creator Store Link](https://create.roblox.com/store/asset/117487107671201/Curtain)
 
-RBXM: [Curtain](https://github.com/user-attachments/files/31855505/Curtain.zip)
+[RBXM](https://github.com/user-attachments/files/31866812/Curtain.zip)
+
 
 
