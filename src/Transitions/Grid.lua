@@ -28,12 +28,14 @@ local function GridIn(info, Color)
 	for _ = 1, 40 do
 		local square = GetRandomSquare()
 		local UIScale = square:WaitForChild("UIScale")
-
+		
 		local scaleTween = TweenService:Create(UIScale, info, {Scale = 1})
 		inTween = TweenService:Create(square, info, {BackgroundTransparency = 0})
 
 		square.BackgroundColor3 = Color or Color3.fromRGB(0, 0, 0)
-
+		
+		square.Visible = true
+		
 		scaleTween:Play()
 		inTween:Play()
 
@@ -55,7 +57,7 @@ local function GridOut(info, Color)
 		outTween = TweenService:Create(square, info, {BackgroundTransparency = 1})
 
 		square.BackgroundColor3 = Color or Color3.fromRGB(0, 0, 0)
-
+		
 		scaleTween:Play()
 		outTween:Play()
 		
@@ -63,6 +65,12 @@ local function GridOut(info, Color)
 	end
 	
 	outTween.Completed:Wait()
+	
+	for _, square in GridFrame:GetChildren() do
+		if not square:IsA("Frame") then continue end
+		square.Visible = false
+	end
+	
 	table.clear(SelectedSquares)
 end
 
@@ -91,7 +99,9 @@ return function(frame1, frame2, isScreenGuiFrame1, isScreenGuiFrame2, transition
 		frame1[propertyToUseFrame1] = false
 	end
 	
-	frame2[propertyToUseFrame2] = true
-		
+	if frame2 then
+		frame2[propertyToUseFrame2] = true
+	end
+	
 	GridOut(info, Color)
 end
