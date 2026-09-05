@@ -1,11 +1,11 @@
 export type GridConfig = {
-	Speed: number?,
+	Duration: number?,
 	Color: Color3?,
 	EasingStyle: Enum.EasingStyle?,
 }
 
 export type SlideConfig = {
-	Speed: number?,
+	Duration: number?,
 	Color: Color3?,
 	Direction: string?,
 	EasingStyle: Enum.EasingStyle?,
@@ -13,15 +13,27 @@ export type SlideConfig = {
 }
 
 export type FadeConfig = {
-	Speed: number?,
+	Duration: number?,
 	Color: Color3?,
 	EasingStyle: Enum.EasingStyle?,
 }
 
 export type IrisConfig = {
-	Speed: number?,
+	Duration: number?,
 	Color: Color3?,
 	EasingStyle: Enum.EasingStyle?,
+}
+
+export type BlindsConfig = {
+	Duration: number?,
+	Color: Color3?,
+	EasingStyle: Enum.EasingStyle?
+}
+
+export type SwipeConfig = {
+	Duration: number?,
+	Color: Color3?,
+	EasingStyle: Enum.EasingStyle?
 }
 
 return {}
