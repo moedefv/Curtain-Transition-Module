@@ -5,7 +5,7 @@ Curtain is a lightweight, customizable Roblox GUI transition library that makes 
 You can even put CUSTOM CALLBACK FUNCTIONS. These functions are called in between the 2 frames, in the middle of the transition. Best for teleporting players, making more UI invisible/visible, and many more uses.
 
 ## Installation
-1. Click on the Creator Store link on the bottom of the page
+1. Download the package using the [Creator Store Link](https://create.roblox.com/store/asset/117487107671201/Curtain) or [RBXM](https://github.com/user-attachments/files/31866812/Curtain.zip)
 2. Add it to your inventory
 3. Go to Toolbox -> Inventory, and you'll see Curtain right there. Add it to your place and put it in ReplicatedStorage.
 
@@ -60,11 +60,6 @@ Swipe = {
 	EasingStyle: Enum.EasingStyle
 }
 ```
-
-## Download
-[Creator Store Link](https://create.roblox.com/store/asset/117487107671201/Curtain)
-
-[RBXM](https://github.com/user-attachments/files/31866812/Curtain.zip)
 
 
 
