@@ -56,16 +56,16 @@ return function(frame1, frame2, isScreenGuiFrame1, isScreenGuiFrame2, transition
 	local ReverseOut
 
 	if not transitionConfig then
-		info = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
+		info = TweenInfo.new(1.5, Enum.EasingStyle.Linear)
 	else
-		local Speed = transitionConfig["Speed"]
+		local Duration = transitionConfig["Duration"]
 		local EasingStyle = transitionConfig["EasingStyle"]
 		
 		Direction = transitionConfig["Direction"] 
 		Color = transitionConfig["Color"]
 		ReverseOut = transitionConfig["ReverseOut"]
 
-		info = TweenInfo.new(Speed or 0.5, EasingStyle or Enum.EasingStyle.Linear)
+		info = TweenInfo.new(Duration or 1.5, EasingStyle or Enum.EasingStyle.Linear)
 	end
 
 	local propertyToUseFrame1 = isScreenGuiFrame1 and "Enabled" or "Visible"
@@ -79,7 +79,9 @@ return function(frame1, frame2, isScreenGuiFrame1, isScreenGuiFrame2, transition
 		frame1[propertyToUseFrame1] = false
 	end
 
-	frame2[propertyToUseFrame2] = true
+	if frame2 then
+		frame2[propertyToUseFrame2] = true
+	end
 
 	SlideOut(info, Color, Direction, ReverseOut)
 end
