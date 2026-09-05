@@ -13,7 +13,9 @@ You can even put CUSTOM CALLBACK FUNCTIONS. These functions are called in betwee
 
 A quick example:
 ```lua
-Curtain:Fade(frame1, frame2, {Duration = 1, EasingStyle = Enum.EasingStyle.Back}, function()
+local config = {Duration = 1, EasingStyle = Enum.EasingStyle.Back}
+
+Curtain:Fade(frame1, frame2, config, function()
   -- custom function here
 end)
 ```
@@ -29,7 +31,7 @@ The current transitions and their settings:
 Grid = {
     Duration: number,
     Color: Color3,
-    EasingStyle: Enum.EasingStyle,
+    EasingStyle: Enum.EasingStyle
 }
 
 Slide = {
@@ -37,13 +39,25 @@ Slide = {
     Color: Color3,
     Direction: string,
     EasingStyle: Enum.EasingStyle,
-    ReverseOut: boolean,
+    ReverseOut: boolean
 }
 
 Fade = {
     Duration: number,
     Color: Color3,
-    EasingStyle: Enum.EasingStyle,
+    EasingStyle: Enum.EasingStyle
+}
+
+Blinds = {
+	Duration: number,
+	Color: Color3,
+	EasingStyle: Enum.EasingStyle
+}
+
+Swipe = {
+	Duration: number,
+	Color: Color3,
+	EasingStyle: Enum.EasingStyle
 }
 ```
 
